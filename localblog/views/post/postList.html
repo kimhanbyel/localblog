@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block mid %} 
+
+<table class="table table-striped text-center">
+  <th>글 제목</th>
+  <th>가격</th>
+  <th>수량</th>
+  <th>등록일</th>
+  <th>글쓴이</th>
+  {% for product in products %}
+  <tr>
+    <td><a href="/products/{{product.idproducts}}">{{ posts.name }}</a></td>
+    <td class="text-end">{{ posts.price }}</td>
+    <td class="text-end">{{ posts.quantity }}</td>
+    <td>{{ posts.date }}</td>
+    <td>{{ posts.seller }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+{% endblock %}
